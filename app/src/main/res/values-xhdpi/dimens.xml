@@ -1,0 +1,5 @@
+<resources>
+
+    <dimen name="user_profile_pic">140dp</dimen>
+
+</resources>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:id="@+id/main_holder">
+
+        <LinearLayout
+            android:id="@+id/calender_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/pick_up_holder"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingRight="20dp">
+
+                <TextView
+                    style="@style/Bold_Title"
+                    android:text="@string/pick_up" />
+
+                <TextView
+                    android:id="@+id/tv_pickup_date"
+                    style="@style/RideEditTextstyle"
+                    android:gravity="center"
+                    android:hint="Pick Up Date" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/silver_grey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/drop_holder"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="20dp">
+
+                <TextView
+                    style="@style/Bold_Title"
+                    android:text="@string/drop" />
+
+                <TextView
+                    android:id="@+id/tv_drop_date"
+                    style="@style/RideEditTextstyle"
+                    android:gravity="center"
+                    android:hint="Drop Date" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/silver_grey" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/note"
+            style="@style/Bold_Title"
+            android:layout_below="@+id/calender_container"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="@string/note"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/note_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/note"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    style="@style/light_slim_Text"
+                    android:paddingBottom="15dp"
+                    android:text="@string/weekday" />
+
+                <TextView
+                    style="@style/light_slim_Text"
+                    android:paddingBottom="15dp"
+                    android:text="@string/weekend" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    style="@style/light_slim_Text"
+                    android:paddingBottom="10dp"
+                    android:text="@string/weekday_time" />
+
+                <TextView
+                    style="@style/light_slim_Text"
+                    android:paddingBottom="15dp"
+                    android:text="@string/weekend_time" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/calender_saperator"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            android:layout_below="@+id/note_container"
+            android:background="@color/silver_grey" />
+
+        <TextView
+            android:id="@+id/location"
+            style="@style/Bold_Title"
+            android:layout_below="@+id/calender_saperator"
+            android:layout_marginTop="20dp"
+            android:text="@string/location"
+            android:visibility="visible"/>
+
+        <com.wickedride.app.views.CustomSpinner
+            android:id="@+id/spinner_cities"
+            style="@style/spinner_black_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location"
+            android:background="@drawable/spinner_bg_black"
+            android:entries="@array/Cities"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:visibility="visible"
+            android:dropDownVerticalOffset="35dp"
+            android:spinnerMode="dropdown"
+
+            android:popupBackground="@android:color/white" />
+
+        <View
+            android:id="@+id/location_saperator"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:visibility="visible"
+            android:layout_below="@+id/spinner_cities"
+            android:background="@color/silver_grey" />
+
+    <TextView
+        android:id="@+id/pick_brand"
+        style="@style/Bold_Title"
+        android:layout_below="@+id/location_saperator"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="@string/pick_brand" />
+
+</RelativeLayout>

@@ -1,0 +1,252 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:layout_above="@+id/Price_accessories_holder"
+        tools:context="com.wickedride.app.fragments.ReserveFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/reserve_your"
+                style="@style/layout_wrap"
+                fontPath="fonts/Montserrat-Light.otf"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:text="@string/reserve_your"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/bike_name"
+                style="@style/layout_wrap"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:layout_below="@+id/reserve_your"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="IRON 883 TODAY"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/reserve_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bike_name"
+                android:background="@android:color/white"
+                android:paddingBottom="55dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="20dp">
+                <LinearLayout
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="0px"
+                    android:layout_height="0px"/>
+                <EditText
+                    android:id="@+id/biker_name"
+                    style="@style/EditTextTheme"
+                    android:backgroundTint="@color/silver_grey"
+                    android:focusableInTouchMode="true"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:nextFocusUp="@id/biker_name"
+                    android:nextFocusLeft="@id/biker_name"
+                    android:textCursorDrawable="@drawable/cursor_drawable"
+                    android:hint="Name" />
+
+                <EditText
+                    android:id="@+id/biker_email"
+                    style="@style/EditTextTheme"
+                    android:layout_below="@+id/biker_name"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:inputType="textEmailAddress"
+                    android:textCursorDrawable="@drawable/cursor_drawable"
+
+                    android:hint="Email" />
+
+                <EditText
+                    android:id="@+id/biker_phone"
+                    style="@style/EditTextTheme"
+                    android:inputType="phone"
+                    android:digits="+0123456789"
+                    android:maxLength="13"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:hint="Phone"
+                    android:textCursorDrawable="@drawable/cursor_drawable"
+
+                    android:layout_below="@+id/biker_email"
+                     />
+
+
+                <LinearLayout
+                    android:id="@+id/calender_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/biker_phone"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/pick_up_holder"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            style="@style/Bold_Title"
+                            android:text="@string/pick_up" />
+
+                        <TextView
+                            android:id="@+id/tv_pickup_date"
+                            style="@style/RideEditTextstyle"
+                            android:gravity="left"
+                            android:hint="Pick Up" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/silver_grey" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/drop_holder"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp">
+
+                        <TextView
+                            style="@style/Bold_Title"
+                            android:text="@string/drop" />
+
+                        <TextView
+                            android:id="@+id/tv_drop_date"
+                            style="@style/RideEditTextstyle"
+                            android:gravity="left"
+                            android:hint="Drop" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/silver_grey" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/location"
+                    style="@style/Bold_Title"
+                    android:layout_below="@+id/calender_container"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/location" />
+
+                <!--<com.wickedride.app.views.CustomSpinner-->
+                    <!--android:id="@+id/spinner_cities"-->
+                    <!--style="@style/spinner_black_text"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/location"-->
+                    <!--android:background="@drawable/spinner_bg_black"-->
+                    <!--android:entries="@array/Cities"-->
+                    <!--android:padding="5dp"-->
+                    <!--android:paddingBottom="10dp"-->
+                    <!--android:popupBackground="@android:color/white" />-->
+                <TextView
+                    android:id="@+id/selected_location"
+                    style="@style/light_slim_Text"
+                    android:layout_below="@+id/location"
+                    android:gravity="bottom"
+                    android:hint="" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/Price_accessories_holder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/content_grey"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/Price_holder"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bike_name_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/small_text_bg_grey"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/days_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/small_text_bg_grey"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fontPath="fonts/Avenir-Heavy.ttf"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <com.wickedride.app.views.RippleButton
+            android:id="@+id/accessories"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="@android:color/black"
+            android:gravity="center"
+            android:text="ACCESSORIES"
+            fontPath="fonts/Montserrat-Bold.otf"
+            android:textSize="16sp"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_translucent_grey"
+        android:clickable="true"
+        android:visibility="gone">
+
+    <com.wickedride.app.views.WRProgressView
+        android:id="@+id/progress"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+        </RelativeLayout>
+</RelativeLayout>

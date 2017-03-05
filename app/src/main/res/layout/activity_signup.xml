@@ -1,0 +1,272 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/sign_up_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/sign_up"
+            android:textColor="@android:color/black" />
+
+        <RelativeLayout
+            android:id="@+id/profile_pic_Lyt"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sign_up_title"
+            android:layout_centerHorizontal="true">
+
+            <com.wickedride.app.views.CircleImageView
+                android:id="@+id/profile_pic"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/user" />
+
+            <ImageView
+                android:id="@+id/img_profile_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/plus_icon"
+
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/sign_up_Lyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_pic_Lyt"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/first_name_title"
+                style="@style/Bikation_Title_details"
+                android:textAllCaps="true"
+                android:text="@string/first_name" />
+
+            <EditText
+                android:id="@+id/first_name"
+                style="@style/EditTextTheme"
+                android:layout_below="@+id/first_name_title"
+                android:capitalize="words"
+                android:cursorVisible="true"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:ems="10"
+                android:inputType="textCapWords"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:hint="@string/john_name"
+                android:textCursorDrawable="@drawable/cursor_drawable" />
+
+            <TextView
+                android:id="@+id/last_name_title"
+                style="@style/Bikation_Title_details"
+                android:layout_below="@+id/first_name"
+                android:layout_marginTop="15dp"
+                android:textAllCaps="true"
+                android:text="@string/last_name" />
+
+            <EditText
+                android:id="@+id/last_name"
+                style="@style/EditTextTheme"
+                android:layout_below="@+id/last_name_title"
+                android:capitalize="words"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:cursorVisible="true"
+                android:ems="10"
+                android:hint="@string/john_last_name"
+                android:textCursorDrawable="@drawable/cursor_drawable" />
+
+            <TextView
+                android:id="@+id/user_email_title"
+                style="@style/Bikation_Title_details"
+                android:layout_below="@+id/last_name"
+                android:layout_marginTop="15dp"
+                android:text="@string/email"
+                android:textAllCaps="true" />
+
+            <EditText
+                android:id="@+id/user_email"
+                style="@style/EditTextTheme"
+                android:layout_below="@+id/user_email_title"
+                android:cursorVisible="true"
+                android:ems="10"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:hint="@string/john_email"
+                android:inputType="textWebEmailAddress"
+                android:textCursorDrawable="@drawable/cursor_drawable" />
+
+            <TextView
+                android:id="@+id/user_phone_title"
+                style="@style/Bikation_Title_details"
+                android:layout_below="@+id/user_email"
+                android:layout_marginTop="15dp"
+                android:text="@string/phone"
+                android:textAllCaps="true" />
+
+            <EditText
+                android:id="@+id/user_phone"
+                style="@style/EditTextTheme"
+                android:layout_below="@+id/user_phone_title"
+                android:cursorVisible="true"
+                android:maxLength="13"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:hint="@string/phone_hint"
+                android:inputType="phone"
+                android:digits="+0123456789"
+                android:textCursorDrawable="@drawable/cursor_drawable" />
+
+            <TextView
+                android:id="@+id/password_title"
+                style="@style/Bikation_Title_details"
+                android:layout_below="@id/user_phone"
+                android:layout_marginTop="15dp"
+                android:text="@string/password_title" />
+
+            <EditText
+                android:id="@+id/password"
+                style="@style/EditTextTheme"
+                android:layout_below="@+id/password_title"
+                android:cursorVisible="true"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:ems="10"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@drawable/cursor_drawable"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/confirm_password_title"
+                style="@style/Bikation_Title_details"
+                android:layout_below="@id/password"
+                android:layout_marginTop="15dp"
+                android:text="@string/confirm_password_title" />
+
+            <EditText
+                android:id="@+id/confirm_password"
+                style="@style/EditTextTheme"
+                android:layout_below="@+id/confirm_password_title"
+                android:cursorVisible="true"
+                android:ems="10"
+                android:hint="@string/password"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@drawable/cursor_drawable"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/birthday_title"
+                style="@style/Bikation_Title_details"
+                android:layout_below="@id/confirm_password"
+                android:layout_marginTop="15dp"
+                android:text="@string/birthday" />
+
+            <TextView
+                android:id="@+id/birthday"
+                style="@style/EditTextTheme"
+                android:layout_below="@+id/birthday_title"
+                android:ems="10"
+                android:hint="@string/birthday_date"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/change_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/birthday"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/change_password"
+                android:textColor="@color/silver_grey"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/create"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:layout_below="@+id/change_password"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/black"
+                android:text="@string/create"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/signin_holder"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sign_up_Lyt"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingLeft="5dp"
+                android:text="@string/have_account"
+                android:textAllCaps="true"
+                android:textColor="@color/silver_grey" />
+
+            <TextView
+                android:id="@+id/sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingLeft="5dp"
+                android:text="@string/sign_in"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/close"
+            style="@style/layout_wrap"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="15dp"
+            android:src="@drawable/cross_black" />
+
+        <com.wickedride.app.views.WRProgressView
+            android:id="@+id/progress"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</ScrollView>

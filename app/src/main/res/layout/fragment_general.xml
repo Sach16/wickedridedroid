@@ -1,0 +1,280 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollview"
+    android:background="@android:color/white"
+    tools:context="com.wickedride.app.fragments.GeneralFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="55dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/title_holder"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/price_Image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingRight="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/price" />
+
+            <TextView
+                android:id="@+id/price_title"
+                style="@style/Bikation_Title_details"
+                android:layout_toEndOf="@+id/price_Image"
+                android:layout_toRightOf="@+id/price_Image"
+                android:text="@string/price" />
+
+            <TextView
+                android:id="@+id/price_value"
+                style="@style/Bikation_details_value"
+                android:layout_alignLeft="@+id/price_title"
+                android:layout_alignStart="@+id/price_title"
+                android:layout_below="@+id/price_title"
+                android:text="@string/price" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/date_holder"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/title_holder">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/date_Image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="15dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/date" />
+
+                <TextView
+                    android:id="@+id/date_title"
+                    style="@style/Bikation_Title_details"
+                    android:layout_toEndOf="@+id/date_Image"
+                    android:layout_toRightOf="@+id/date_Image"
+                    android:textAllCaps="true"
+                    android:text="@string/date" />
+
+                <TextView
+                    android:id="@+id/date_value"
+                    style="@style/Bikation_details_value"
+                    android:layout_alignLeft="@+id/date_title"
+                    android:layout_alignStart="@+id/date_title"
+                    android:layout_below="@+id/date_title"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/date"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/distance_Image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="15dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/distance" />
+
+                <TextView
+                    android:id="@+id/distance_title"
+                    style="@style/Bikation_Title_details"
+                    android:layout_toEndOf="@+id/distance_Image"
+                    android:layout_toRightOf="@+id/distance_Image"
+                    android:text="@string/distance" />
+
+                <TextView
+                    android:id="@+id/distance_value"
+                    style="@style/Bikation_details_value"
+                    android:layout_alignLeft="@+id/distance_title"
+                    android:layout_alignStart="@+id/distance_title"
+                    android:layout_below="@+id/distance_title"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/distance"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/description_holder"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/date_holder">
+
+            <ImageView
+                android:id="@+id/description_Image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingRight="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/description" />
+
+            <TextView
+                android:id="@+id/description_title"
+                style="@style/Bikation_Title_details"
+                android:layout_toEndOf="@+id/description_Image"
+                android:layout_toRightOf="@+id/description_Image"
+                android:text="@string/description_title" />
+
+            <TextView
+                android:id="@+id/description_value"
+                style="@style/Bikation_details_value"
+                android:layout_alignLeft="@+id/description_title"
+                android:layout_alignStart="@+id/description_title"
+                android:layout_below="@+id/description_title"
+                android:text="@string/description_title" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/joined_holder"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/description_holder">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/joined_Image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="15dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/join" />
+
+                <TextView
+                    android:id="@+id/joined_title"
+                    style="@style/Bikation_Title_details"
+                    android:layout_toEndOf="@+id/joined_Image"
+                    android:layout_toRightOf="@+id/joined_Image"
+                    android:text="@string/joined" />
+
+                <TextView
+                    android:id="@+id/joined_value"
+                    style="@style/Bikation_details_value"
+                    android:layout_alignLeft="@+id/joined_title"
+                    android:layout_alignStart="@+id/joined_title"
+                    android:layout_below="@+id/joined_title"
+                    android:text="@string/joined" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/meeting_Image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="15dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/meeting" />
+
+                <TextView
+                    android:id="@+id/meeting_title"
+                    style="@style/Bikation_Title_details"
+                    android:layout_toEndOf="@+id/meeting_Image"
+                    android:layout_toRightOf="@+id/meeting_Image"
+                    android:text="@string/meeting" />
+
+                <TextView
+                    android:id="@+id/meeting_value"
+                    style="@style/Bikation_details_value"
+                    android:layout_alignLeft="@+id/meeting_title"
+                    android:layout_alignStart="@+id/meeting_title"
+                    android:layout_below="@+id/meeting_title"
+                    android:text="@string/meeting" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/recommended_holder"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/joined_holder">
+
+            <ImageView
+                android:id="@+id/recommended_Image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingRight="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bike" />
+
+            <TextView
+                android:id="@+id/recommended_title"
+                style="@style/Bikation_Title_details"
+                android:layout_toEndOf="@+id/recommended_Image"
+                android:layout_toRightOf="@+id/recommended_Image"
+                android:text="@string/recommended" />
+
+            <TextView
+                android:id="@+id/recommended_value"
+                style="@style/Bikation_details_value"
+                android:layout_alignLeft="@+id/recommended_title"
+                android:layout_alignStart="@+id/recommended_title"
+                android:layout_below="@+id/recommended_title"
+                android:text="@string/recommended" />
+
+        </RelativeLayout>
+
+        <Button
+            fontPath="fonts/Montserrat-Bold.otf"
+            android:id="@+id/book_now"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recommended_holder"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/black"
+            android:text="@string/register_now"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</ScrollView>

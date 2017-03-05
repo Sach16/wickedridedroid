@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <include
+        android:id="@+id/toolbar_holder"
+        layout="@layout/rent_toolbar" />
+
+    <com.wickedride.app.views.HeaderGridView
+        android:id="@+id/gridView"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_below="@+id/toolbar_holder"
+        android:layout_above="@+id/search_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3">
+    </com.wickedride.app.views.HeaderGridView>
+
+    <LinearLayout
+        android:id="@+id/search_holder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/content_grey"
+        android:orientation="horizontal"
+        android:padding="25dp">
+
+        <com.wickedride.app.views.RippleButton
+            android:id="@+id/search"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            fontPath="fonts/Montserrat-Bold.otf"
+            android:background="@android:color/black"
+            android:gravity="center"
+            android:text="@string/search"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <com.wickedride.app.views.WRProgressView
+        android:id="@+id/progress"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/error_msg"
+        style="@style/light_slim_Text"
+        android:maxLines="1"
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:text="No internet connection."
+        android:layout_centerInParent="true"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.wickedride.app.fragments.AccessoriesFragment">
+
+    <TextView
+        fontPath="fonts/Montserrat-Bold.otf"
+        android:id="@+id/accessories"
+        style="@style/layout_wrap"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="@string/accessories"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/accessories"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/white"
+        android:paddingTop="5dp"
+        android:layout_above="@+id/Price_accessories_holder" />
+
+    <LinearLayout
+        android:id="@+id/accessoriesInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/accessories"
+        android:layout_marginTop="30dp"
+        android:padding="20dp"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/infoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fontPath="fonts/Avenir-Heavy.ttf"
+            android:textColor="@color/black"
+            android:text="We rent out accessories such as \n\n-Riding Jackets\n-Gloves\n-GoPro Camera\n-Saddle Bags\n-Knee Guard\n-Helmets"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/infoContactText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            fontPath="fonts/Avenir-Heavy.ttf"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:text="Please call +918880299299 or write to reservations@wickedride.com to enquire on the availability."/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Price_accessories_holder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/content_grey"
+        android:orientation="horizontal"
+        android:weightSum="2.5"
+        android:layout_alignParentBottom="true"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/Price_holder"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bike_name_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/small_text_bg_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/days_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/small_text_bg_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fontPath="fonts/Avenir-Heavy.ttf"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+
+
+        </LinearLayout>
+
+        <com.wickedride.app.views.RippleButton
+            android:id="@+id/reserve"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_weight="1.5"
+            android:background="@android:color/black"
+            android:gravity="center"
+            android:text="RESERVE"
+            fontPath="fonts/Montserrat-Bold.otf"
+            android:textSize="16sp"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+    <com.wickedride.app.views.WRProgressView
+        android:id="@+id/progress"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

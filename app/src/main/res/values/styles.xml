@@ -1,0 +1,221 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="elevation">0.5dp</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="android:activatedBackgroundIndicator" tools:ignore="NewApi">@style/activated
+        </item>
+        <item name="colorAccent">@android:color/white</item>
+        <item name="colorControlNormal">@color/silver_grey</item>
+        <item name="colorControlActivated">@color/silver_grey</item>
+        <item name="colorControlHighlight">@color/silver_grey</item>
+        <!--<item name="colorPrimary">@color/bluegray</item>-->
+        <!--<item name="colorPrimaryDark">@color/bluegray</item>-->
+    </style>
+    <style name="Theme.Transparent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="activated" parent="AppTheme">
+        <item name="android:background" tools:targetApi="11">@drawable/selector_activated_bg</item>
+    </style>
+
+    <style name="EditTextTheme" parent="Widget.AppCompat.EditText">
+        <item name="fontPath">fonts/Avenir-Book.ttf</item>
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textColor">@color/silver_grey</item>
+        <item name="android:textColorHint">@color/silver_grey</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:drawableBottom">@color/silver_grey</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="gapBetweenBars">6dp</item>
+        <item name="thickness">1.5dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="TextView_Navigation">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/off_white</item>
+        <item name="android:paddingTop">13dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingBottom">13dp</item>
+        <item name="android:paddingLeft">50dp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_text</item>
+
+    </style>
+
+    <style name="datePickerTheme" parent="@android:style/Widget.Holo.DatePicker"></style>
+
+    <style name="Bold_Title">
+        <item name="fontPath">fonts/Montserrat-Bold.otf</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:background">@drawable/selector_text</item>
+    </style>
+
+    <style name="Bold_Title_details">
+        <item name="fontPath">fonts/Montserrat-Bold.otf</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:drawablePadding">5dp</item>
+    </style>
+
+    <style name="light_slim_Text">
+        <item name="fontPath">fonts/Avenir-Book.ttf</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/silver_grey</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/selector_text</item>
+    </style>
+
+    <style name="RideEditTextstyle">
+        <item name="fontPath">fonts/Avenir-Book.ttf</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/silver_grey</item>
+        <item name="android:textColorHint">@color/silver_grey</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:drawableRight">@drawable/calender</item>
+    </style>
+
+    <style name="TextAppearence.App.TextInputLayout" parent="@android:style/TextAppearance">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="LoginTextBold">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="colorPrimary">@color/silver_grey</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/silver_grey</item>
+        <item name="colorControlActivated">@color/silver_grey</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:background">@drawable/selector_text</item>
+    </style>
+
+    <style name="spinner_black_text" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/silver_grey</item>
+        <item name="android:textColorHint">@color/silver_grey</item>
+        <item name="android:hint">@string/bangalore</item>
+        <item name="android:background">@drawable/selector_text</item>
+    </style>
+
+    <style name="layout_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="layout_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="layout_wrap_match">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="layout_match_wrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="accessories_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">15dp</item>
+    </style>
+
+    <style name="Bikation_Title_details">
+        <item name="fontPath">fonts/Montserrat-Bold.otf</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@drawable/selector_text</item>
+    </style>
+
+    <style name="More_Sub_Title">
+        <item name="fontPath">fonts/Avenir-Medium.ttf</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/silver_grey_dark</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@drawable/selector_text</item>
+    </style>
+
+    <style name="Bikation_details_value">
+        <item name="fontPath">fonts/Avenir-Medium.ttf</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/silver_grey_dark</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_marginTop">35dp</item>
+        <item name="android:background">@drawable/selector_text</item>
+    </style>
+
+    <string name="bangalore">Bangalore</string>
+
+    <style name="CustomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/custom_rating_bar</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:maxHeight">20dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+    </style>
+</resources>

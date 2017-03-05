@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+   >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/accessories_holder"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/accessories_image"
+                android:layout_width="130dp"
+                android:layout_height="95dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/hd_night_rod_1"
+                android:visibility="visible" />
+
+            <TextView
+                fontPath="fonts/Montserrat-Regular.otf"
+                android:id="@+id/accessories_name"
+                style="@style/accessories_item"
+                android:layout_alignTop="@+id/accessories_image"
+                android:layout_toRightOf="@+id/accessories_image"
+                android:text="Go Pro"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/accessories_description"
+                style="@style/accessories_item"
+                android:layout_toRightOf="@+id/accessories_image"
+                android:layout_below="@+id/accessories_name"
+                android:text="Go Pro"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/accessories_price"
+                style="@style/accessories_item"
+                android:layout_toRightOf="@+id/accessories_image"
+                android:layout_alignBottom="@+id/accessories_image"
+                android:paddingTop="5dp"
+                android:gravity="bottom"
+                android:text="Rs.30,000/-"
+                android:textColor="@color/orange"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/accessories_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/check_circle"
+                android:layout_alignBottom="@+id/accessories_price"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

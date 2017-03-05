@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/basedialog_outerview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:background="#CC000000" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dp"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/basedialog_header"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_weight="0"
+                android:layout_gravity="center" 
+                android:background="@android:color/white" >
+
+                <TextView
+                    android:id="@+id/basedialog_headertext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="Dialog Header"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/basedialog_contentholder"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/basedialog_bottombar"
+                android:layout_width="fill_parent"
+                android:layout_height="51dp"
+                android:layout_weight="0"
+                android:background="#FFFFFFFF" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="0"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/basedialog_cancel"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:text="Cancel"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/basedialog_ok"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:text="Ok"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

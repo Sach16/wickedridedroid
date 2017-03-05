@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    fontPath="fonts/Avenir-Book.ttf"
+    android:id="@+id/select_type_title"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:layout_margin="10dp"
+    android:padding="5dp"
+    android:gravity="center"
+    android:background="@android:color/transparent"
+    android:textColor="@android:color/white"
+    android:ellipsize="end"
+    android:singleLine="true" />

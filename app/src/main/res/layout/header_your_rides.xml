@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calender_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/pick_up_holder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/tv_pickup_date"
+            style="@style/RideEditTextstyle"
+            android:gravity="bottom"
+            android:hint="Pick Up" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/silver_grey" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/drop_holder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="20dp">
+
+        <TextView
+            android:id="@+id/tv_drop_date"
+            style="@style/RideEditTextstyle"
+            android:hint="Drop" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/silver_grey" />
+    </LinearLayout>
+
+</LinearLayout>

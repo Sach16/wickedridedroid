@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.wickedride.app.activities.SplashActivity">
+
+    <VideoView
+        android:id="@+id/splash_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="155dp"
+        android:src="@drawable/logo_white_wickedride" />
+
+
+    <TextView
+        fontPath="fonts/Avenir-Book.ttf"
+        android:id="@+id/own_the_road"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/own_the_road"
+        android:textColor="@color/cool_grey"
+        android:textSize="13sp"
+        android:layout_marginBottom="105dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/btn_holder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:layout_alignTop="@+id/own_the_road"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <com.wickedride.app.views.RippleButton
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:text="@string/bikation"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:textAllCaps="true"
+            android:background="@color/cool_orange"
+            android:textColor="@color/white"
+            style="?android:attr/buttonStyleSmall"
+            android:id="@+id/btn_bikation" />
+
+        <com.wickedride.app.views.RippleButton
+            android:id="@+id/btn_rent"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@color/cool_orange"
+            android:textColor="@color/white"
+            style="?android:attr/buttonStyleSmall"
+            android:text="@string/rent_a_bike" />
+
+    </LinearLayout>
+
+</RelativeLayout>

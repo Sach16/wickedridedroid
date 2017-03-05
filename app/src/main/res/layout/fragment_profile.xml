@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    >
+
+
+    <com.wickedride.app.views.CircleImageView
+        android:id="@+id/profile_pic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/sign_up_title"
+        android:src="@drawable/user" />
+    <TextView
+        android:id="@+id/rides_available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="13/20 Rides available"
+        android:textColor="@color/grey"
+        android:visibility="gone"
+        android:layout_below="@+id/profile_pic"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/rides_expiry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Subscription expires on 25 May 2016"
+        android:textColor="@color/light_text"
+        android:layout_below="@+id/rides_available"
+        android:visibility="gone"
+        android:textSize="13sp"/>
+
+    <LinearLayout
+        android:id="@+id/title_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/white"
+        android:layout_below="@+id/rides_expiry"
+        android:orientation="horizontal">
+
+
+        <com.wickedride.app.views.RippleTextView
+            android:id="@+id/bikes"
+            style="@style/Bold_Title_details"
+            android:gravity="center"
+            android:layout_weight="0"
+            android:text="@string/bikes" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/silver_grey"
+            android:visibility="gone"/>
+
+        <com.wickedride.app.views.RippleTextView
+            android:id="@+id/events"
+            style="@style/Bold_Title_details"
+            android:gravity="center"
+            android:layout_weight="0"
+            android:text="@string/events"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/contentPanel_bikation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_holder"
+        android:layout_centerHorizontal="true"></FrameLayout>
+    <!--<android.support.v4.view.ViewPager
+        android:id="@+id/profile_pager"
+        android:layout_below="@+id/title_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+
+</RelativeLayout>

@@ -1,0 +1,441 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollview"
+    android:background="@android:color/white"
+    tools:context="com.wickedride.app.fragments.GeneralFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="50dp">
+
+        <RelativeLayout
+            android:id="@+id/includes_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:id="@+id/includes_holder"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/includes_Image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="15dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/includes" />
+
+                <TextView
+                    android:id="@+id/includes_title"
+                    style="@style/Bikation_Title_details"
+                    android:layout_toEndOf="@+id/includes_Image"
+                    android:layout_toRightOf="@+id/includes_Image"
+                    android:text="@string/includes" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/food_bottle_holder"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/includes_holder"
+                android:layout_marginLeft="40dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/food_Image"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:paddingRight="15dp"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--android:src="@drawable/food" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/food_title"-->
+                        <!--style="@style/More_Sub_Title"-->
+                        <!--android:layout_toEndOf="@+id/food_Image"-->
+                        <!--android:layout_toRightOf="@+id/food_Image"-->
+                        <!--android:text="@string/food" />-->
+
+                <!--</RelativeLayout>-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/entry_Image"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--android:src="@drawable/bottle" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/entry_title"-->
+                        <!--style="@style/More_Sub_Title"-->
+                        <!--android:layout_toEndOf="@+id/entry_Image"-->
+                        <!--android:layout_toRightOf="@+id/entry_Image"-->
+                        <!--android:text="@string/water_bottle" />-->
+
+                <!--</RelativeLayout>-->
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/ticket_bike_holder"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_below="@+id/food_bottle_holder"-->
+                <!--android:layout_marginLeft="40dp"-->
+                <!--android:layout_marginTop="10dp">-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/tickets_Image"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:paddingRight="15dp"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--android:src="@drawable/tickets" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tickets_title"-->
+                        <!--style="@style/More_Sub_Title"-->
+                        <!--android:layout_toEndOf="@+id/tickets_Image"-->
+                        <!--android:layout_toRightOf="@+id/tickets_Image"-->
+                        <!--android:text="@string/tickets" />-->
+
+                <!--</RelativeLayout>-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/deposit_Image"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--android:src="@drawable/deposit" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/deposit_title"-->
+                        <!--style="@style/More_Sub_Title"-->
+                        <!--android:layout_toEndOf="@+id/deposit_Image"-->
+                        <!--android:layout_toRightOf="@+id/deposit_Image"-->
+                        <!--android:text="@string/includes" />-->
+
+                <!--</RelativeLayout>-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/more_holder"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_below="@+id/ticket_bike_holder"-->
+                <!--android:layout_marginLeft="40dp"-->
+                <!--android:layout_marginTop="10dp">-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/more_Image"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:paddingRight="15dp"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--android:src="@drawable/check_right" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/more_title"-->
+                        <!--style="@style/More_Sub_Title"-->
+                        <!--android:layout_toEndOf="@+id/more_Image"-->
+                        <!--android:layout_toRightOf="@+id/more_Image"-->
+                        <!--android:text="@string/more" />-->
+
+                <!--</RelativeLayout>-->
+
+            <!--</LinearLayout>-->
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/excludes_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/includes_parent"
+            android:background="@android:color/white"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:id="@+id/excludes_holder"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/excludes_Image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="15dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/includes" />
+
+                <TextView
+                    android:id="@+id/excludes_title"
+                    style="@style/Bikation_Title_details"
+                    android:layout_toEndOf="@+id/excludes_Image"
+                    android:layout_toRightOf="@+id/excludes_Image"
+                    android:text="@string/excludes" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/medical_accom_holder"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:orientation="vertical"
+                android:layout_below="@+id/excludes_holder"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp">
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/medical_Image"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:paddingRight="15dp"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--android:src="@drawable/food" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/medical_title"-->
+                        <!--style="@style/More_Sub_Title"-->
+                        <!--android:layout_toEndOf="@+id/medical_Image"-->
+                        <!--android:layout_toRightOf="@+id/medical_Image"-->
+                        <!--android:text="@string/medical" />-->
+
+                <!--</RelativeLayout>-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="0.9">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/accom_Image"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--android:src="@drawable/bottle" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/accom_title"-->
+                        <!--style="@style/More_Sub_Title"-->
+                        <!--android:layout_toEndOf="@+id/accom_Image"-->
+                        <!--android:layout_toRightOf="@+id/accom_Image"-->
+                        <!--android:text="@string/accom" />-->
+
+                <!--</RelativeLayout>-->
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/personal_holder"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_below="@+id/medical_accom_holder"-->
+                <!--android:layout_marginLeft="40dp"-->
+                <!--android:layout_marginTop="10dp">-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/personal_Image"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:paddingRight="15dp"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--android:src="@drawable/shop" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/personal_title"-->
+                        <!--style="@style/More_Sub_Title"-->
+                        <!--android:layout_toEndOf="@+id/personal_Image"-->
+                        <!--android:layout_toRightOf="@+id/personal_Image"-->
+                        <!--android:text="@string/personal" />-->
+
+                <!--</RelativeLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/more_exludes_holder"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_below="@+id/personal_holder"-->
+                <!--android:layout_marginLeft="40dp"-->
+                <!--android:layout_marginTop="10dp">-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/more_ex_Image"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:paddingRight="15dp"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--android:src="@drawable/check_right" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/more_ex_title"-->
+                        <!--style="@style/More_Sub_Title"-->
+                        <!--android:layout_toEndOf="@+id/more_ex_Image"-->
+                        <!--android:layout_toRightOf="@+id/more_ex_Image"-->
+                        <!--android:text="@string/more" />-->
+
+                <!--</RelativeLayout>-->
+
+            <!--</LinearLayout>-->
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rules_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/excludes_parent"
+            android:background="@android:color/white"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:id="@+id/rules_holder"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/rules_Image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="15dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/includes" />
+
+                <TextView
+                    android:id="@+id/rules_title"
+                    style="@style/Bikation_Title_details"
+                    android:layout_toEndOf="@+id/rules_Image"
+                    android:layout_toRightOf="@+id/rules_Image"
+                    android:text="@string/rules" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ride_rules"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/rules_holder"
+                android:orientation="vertical"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp">
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/rules_text_1"-->
+                        <!--style="@style/More_Sub_Title"-->
+                        <!--android:text="@string/rule_1"-->
+                        <!--android:layout_centerVertical="false"/>-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/rules_text_2"-->
+                        <!--style="@style/More_Sub_Title"-->
+                        <!--android:layout_below="@+id/rules_text_1"-->
+                        <!--android:text="@string/rule_2" />-->
+
+                <!--</RelativeLayout>-->
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <Button
+            fontPath="fonts/Montserrat-Bold.otf"
+            android:id="@+id/register_now"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rules_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/black"
+            android:text="@string/register_now"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</ScrollView>

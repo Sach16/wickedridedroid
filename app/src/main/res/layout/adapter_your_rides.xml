@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/bikes_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="0dp"
+        android:layout_margin="5dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardCornerRadius="0dp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/bike_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="15dp">
+
+            <ImageView
+                android:id="@+id/bike_image"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/place_holder"
+                android:transitionName="Bike_Image"
+                android:visibility="visible"/>
+
+            <RelativeLayout
+                android:id="@+id/image_soldout_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:visibility="gone"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/sold_out_overlay">
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/bikation_conductor_name"
+                android:layout_width="match_parent"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="-20dp"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:layout_below="@id/bike_image"
+                android:background="@color/mdtp_transparent_black"
+                android:layout_height="20dp"/>
+
+            <ImageView
+                android:id="@+id/bike_logo"
+                android:layout_width="55dp"
+                android:layout_height="45dp"
+                android:padding="5dp"
+                android:src="@drawable/harley_logo"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/bike_details_with_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_below="@id/bike_image">
+
+                <TextView
+                    android:id="@+id/bike_name"
+                    fontPath="fonts/Montserrat-Regular.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="Night Rod"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/bike_location"
+                    fontPath="fonts/Avenir-Medium.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bike_name"
+                    android:gravity="right"
+                    android:textColor="@color/silver_grey"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/soldout_text"
+                    fontPath="fonts/Avenir-Roman.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/bike_name"
+                    android:singleLine="true"
+                    android:text="Sold out"
+                    android:visibility="gone"
+                    android:textColor="@color/orange"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/bike_price"
+                    fontPath="fonts/Avenir-Roman.ttf"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:paddingTop="10dp"
+                    android:singleLine="true"
+                    android:text="Rs.90,00000000000/-"
+                    android:textColor="@color/orange"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/per_day"
+                    fontPath="fonts/Avenir-Medium.ttf"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/bike_price"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="30,000/day"
+                    android:textColor="@color/silver_grey"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bike_details_wo_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_below="@id/bike_image">
+
+                <TextView
+                    android:id="@+id/bike_name_wo"
+                    fontPath="fonts/Montserrat-Regular.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="Night Rod"
+                    android:textAllCaps="true"
+                    android:ellipsize="end"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/bike_location_wo"
+                    fontPath="fonts/Avenir-Medium.ttf"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/silver_grey"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:id="@+id/bikation_trip_distance"
+                    fontPath="fonts/Avenir-Medium.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="2000kms"
+                    android:visibility="gone"
+                    android:textColor="@color/silver_grey"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/bike_price_wo"
+                    fontPath="fonts/Avenir-Roman.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/bike_name_wo"
+                    android:ellipsize="end"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:textColor="@color/silver_grey"
+                    android:text="90,00000"
+                    android:textSize="12sp"/>
+
+
+
+                <TextView
+                    android:id="@+id/per_day_wo"
+                    fontPath="fonts/Avenir-Medium.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/bike_price_wo"
+                    android:ellipsize="end"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="30,000/day"
+                    android:textColor="@color/silver_grey"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:id="@+id/bikation_startdate_days"
+                    fontPath="fonts/Avenir-Roman.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/bike_name_wo"
+                    android:ellipsize="end"
+                    android:gravity="left"
+                    android:visibility="gone"
+                    android:text="2015-12-09 (5 days)"
+                    android:singleLine="true"
+                    android:textColor="@color/orange"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

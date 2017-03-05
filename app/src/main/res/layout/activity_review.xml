@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/review_header"
+        fontPath="fonts/Montserrat-Bold.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/review_title"
+        android:textColor="@android:color/black"
+        tools:ignore="MissingPrefix" />
+        <ImageView
+            android:id="@+id/close"
+            style="@style/layout_wrap"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="15dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/cross_black" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="vertical">
+    <EditText
+        android:id="@+id/review_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/editfield_bg"
+        android:gravity="center_horizontal"
+        android:hint="@string/review_title_hint"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rating"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+               />
+            <RatingBar
+                android:id="@+id/biker_rating"
+                style="@style/CustomRatingBar"
+                android:numStars="5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <EditText
+            android:id="@+id/review_msg"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:textColor="@color/black"
+            android:background="@drawable/editfield_bg"
+            />
+        <Button
+            android:id="@+id/send_review"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/black"
+            android:text="@string/send"
+            android:textStyle="bold"
+             />
+    </LinearLayout>
+</LinearLayout>

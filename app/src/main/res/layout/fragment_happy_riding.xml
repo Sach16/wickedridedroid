@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/display_image"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/happy_riding"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/close"
+        style="@style/layout_wrap"
+        android:src="@drawable/cross_white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        fontPath="fonts/Avenir-Medium.ttf"
+        android:id="@+id/happy_riding_desc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/silver_grey"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/display_image"
+        android:text="@string/happy_riding_desc"/>
+
+    <TextView
+        android:id="@+id/happy_riding"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/happy_riding_desc"
+        android:text="@string/happy_riding"
+        />
+
+    <TextView
+        fontPath="fonts/Avenir-Medium.ttf"
+        android:id="@+id/happy_riding_do"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/silver_grey"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_marginTop="30dp"
+        android:layout_above="@+id/faq"
+        android:text="@string/happy_riding_do"/>
+
+    <TextView
+        fontPath="fonts/Montserrat-SemiBold.otf"
+        android:id="@+id/faq"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/faq"
+        />
+
+</RelativeLayout>

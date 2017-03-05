@@ -1,0 +1,289 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_holder"
+        android:orientation="vertical">
+
+        <com.wickedride.app.views.CustomParallaxScrollView
+            android:id="@+id/scrollable_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:parallax_factor="1.9"
+            tools:context="com.wickedride.app.activities.BikeDetailsActivity">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/image_holder"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <ImageView
+                        android:id="@+id/bike_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="280dp"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="fitCenter"
+                        android:transitionName="Bike_Image" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/description_holder"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/image_holder"
+                    android:layout_marginTop="-50dp">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_below="@+id/bike_logo_holder"
+                        android:background="@android:color/white">
+
+                        <TextView
+                            android:id="@+id/bike_name"
+                            fontPath="fonts/Montserrat-Regular.otf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@color/light_black"
+                            android:textSize="24sp" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/spinnerLyt"
+    android:layout_below="@+id/bike_name"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal"
+    >
+
+                        <com.wickedride.app.views.CustomSpinner
+                            android:id="@+id/bike_location"
+                            style="@style/spinner_black_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginLeft="30dp"
+                            android:background="@drawable/spinner_bg_black"
+                            android:entries="@array/Cities"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:dropDownVerticalOffset="35dp"
+                            android:spinnerMode="dropdown"
+                            android:popupBackground="@android:color/white" />
+</LinearLayout>
+                        <TextView
+                            android:id="@+id/bike_description"
+                            fontPath="fonts/Avenir-Medium.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/spinnerLyt"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="45dp"
+                            android:paddingRight="45dp"
+                            android:paddingTop="5dp"
+                            android:textColor="@color/silver_grey"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/show_less"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="30dp"
+                            android:text="@string/dots"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bike_logo_holder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/trans_opaq_bg">
+
+                        <ImageView
+                            android:id="@+id/bike_logo"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/circular_white_bg"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:padding="5dp"
+                    android:src="@drawable/arrow_black_left" />
+
+            </RelativeLayout>
+        </com.wickedride.app.views.CustomParallaxScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_holder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/show_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/dots"
+            android:visibility="gone"
+            android:textColor="@color/silver_grey"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/grey" />
+
+        <LinearLayout
+            android:id="@+id/price_holder"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/separator"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/left_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:src="@drawable/arrow_black_left"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/price_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/effective_price"
+                    fontPath="fonts/Avenir-Medium.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/silver_grey"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/rental"
+                    fontPath="fonts/Avenir-Medium.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/silver_grey"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/bike_price"
+                    fontPath="fonts/Avenir-Heavy.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.30,000/-"
+                    android:textColor="@color/orange"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/right_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:src="@drawable/arrow_black_right"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Price_accessories_holder"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/price_holder"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <com.wickedride.app.views.RippleButton
+                android:id="@+id/book_now"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:gravity="center"
+                android:text="@string/book_now"
+                android:textStyle="bold"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textSize="18sp"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_translucent_grey"
+        android:clickable="true"
+        android:visibility="gone">
+        <com.wickedride.app.views.WRProgressView
+            android:id="@+id/progress"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:visibility="visible" />
+        </RelativeLayout>
+
+</RelativeLayout>

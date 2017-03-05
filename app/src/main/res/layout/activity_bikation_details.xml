@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.inkoniq.parallaxviewpager.ScrollableLayout
+        android:id="@+id/scrollable_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:scrollable_closeUpAnimationMillis="100"
+        app:scrollable_closeUpAnimatorInterpolator="@android:anim/accelerate_decelerate_interpolator"
+        app:scrollable_considerIdleMillis="125"
+        app:scrollable_defaultCloseUp="true"
+        app:scrollable_friction="0.075"
+        app:scrollable_maxScroll="@dimen/header_height"
+        app:scrollable_scrollerFlywheel="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/details_image_holder"
+                android:layout_width="match_parent"
+                android:layout_height="275dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/details_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="275dp"
+                    android:transitionName="Bike_Image"
+                    android:scaleType="centerCrop"
+                     />
+
+                <RelativeLayout
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/mdtp_transparent_black"
+                    android:layout_width="match_parent" >
+                <RatingBar
+                    android:id="@+id/biker_rating"
+                    style="@style/CustomRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/bikation_club"
+                    fontPath="fonts/Avenir-Roman.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:visibility="visible" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/title_holder"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/details_image_holder"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+
+                <com.wickedride.app.views.RippleTextView
+                    android:id="@+id/general"
+                    style="@style/Bold_Title_details"
+                    fontPath="fonts/Montserrat-Bold.otf"
+                    android:gravity="center"
+                    android:text="@string/general" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/silver_grey" />
+
+                <com.wickedride.app.views.RippleTextView
+                    android:id="@+id/more_info"
+                    style="@style/Bold_Title_details"
+                    fontPath="fonts/Montserrat-Bold.otf"
+                    android:gravity="center"
+                    android:text="@string/more_info" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/silver_grey" />
+
+                <com.wickedride.app.views.RippleTextView
+                    android:id="@+id/review"
+                    style="@style/Bold_Title_details"
+                    fontPath="fonts/Montserrat-Bold.otf"
+                    android:gravity="center"
+                    android:text="@string/review" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/details_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/tabs_height" />
+
+    </com.inkoniq.parallaxviewpager.ScrollableLayout>
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:src="@drawable/arrow_white_left" />
+
+    <TextView
+        android:id="@+id/bikation_name"
+        fontPath="fonts/Avenir-Roman.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="13dp"
+        android:layout_toRightOf="@+id/back_button"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="23sp"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_translucent_grey"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_centerInParent="true">
+
+        <com.wickedride.app.views.WRProgressView
+            android:id="@+id/progress"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</RelativeLayout>

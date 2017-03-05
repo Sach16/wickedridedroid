@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.wickedride.app.views.CircleImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop"
+        android:src="@android:color/holo_blue_bright" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        android:layout_alignTop="@+id/imgAvatar"
+        android:layout_toRightOf="@+id/imgAvatar"
+        android:orientation="vertical">
+
+        <TextView
+            fontPath="fonts/Montserrat-Bold.otf"
+            android:id="@+id/biker_comment"
+            style="@style/Bold_Title"
+            android:textSize="12sp"
+            android:text="Best group, all thanks to WIcked Ride" />
+
+        <RatingBar
+            android:id="@+id/biker_rating"
+            style="@style/CustomRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            fontPath="fonts/Avenir-Book.ttf"
+            android:id="@+id/by_biker"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="By: John Syndal, 15/08/2015"
+            android:textColor="@color/light_text"
+            android:textSize="13sp"/>
+
+        <TextView
+            fontPath="fonts/Avenir-Roman.ttf"
+            android:id="@+id/biker_experience"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/description"
+            android:textColor="@color/light_text"
+            android:textSize="13sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

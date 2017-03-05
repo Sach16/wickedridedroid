@@ -1,0 +1,164 @@
+
+
+<resources>
+    <string name="app_name">WickedRide</string>
+    <string name="name">WICKED\nRIDE</string>
+
+    <string name="facebook_app_id">126945310983186</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="transition_name">Bike_Image</string>
+    <string name="drawer_open">Menu opened</string>
+    <string name="drawer_close">Menu closed</string>
+    <string name="button_cancel">CANCEL</string>
+    <string name="button_save">SAVE</string>
+    <string name="button_ok">OK</string>
+    <string name="loader_message">Loading</string>
+    <string name="own_the_road">Own the Road, Rent the Ride</string>
+    <string name="bikation">Bikation</string>
+    <string name="list">LIST</string>
+    <string name="rent_a_bike">RENT A BIKE</string>
+    <string name="home">HOME</string>
+    <string name="title_activity_rent">RentActivity</string>
+    <string name="title_activity_bikation">BikationActivity</string>
+    <string name="your_rides">YOUR RIDES</string>
+    <string name="pick_your_ride">PICK YOUR RIDE</string>
+    <string name="title_activity_pick_ride">PickRideActivity</string>
+    <string name="gallery">GALLERY</string>
+    <string name="faq">FAQ\'s</string>
+    <string name="news">NEWS</string>
+    <string name="about">ABOUT</string>
+    <string name="settings">SETTINGS</string>
+    <string name="logout">LOGOUT</string>
+    <string name="pick_up">PICK UP</string>
+    <string name="drop">DROP</string>
+    <string name="note">NOTE</string>
+    <string name="weekday">Weekday timing</string>
+    <string name="weekday_time">10:00 am to 09:00 pm</string>
+    <string name="weekend">Weekend timing</string>
+    <string name="weekend_time">08:00 am to 07:00 pm</string>
+    <string name="location">LOCATION</string>
+    <string name="pick_brand">PICK YOUR BRAND</string>
+    <string name="refer">REFER</string>
+    <string name="title_activity_bike_details">BikeDetailsActivity</string>
+    <string name="description">Iron 883 has a 4 valve engine that generates 50 bhp of excellent power and 69NM of torque which enhances the ride experience of this Harley machine /n
+        Iron 883 has a 4 valve engine that generates 50 bhp of excellent power and 69NM of torque which enhances the ride experience of this Harley machine /n
+        Iron 883 has a 4 valve engine that generates 50 bhp of excellent power and 69NM of torque which enhances the ride experience of this Harley machine /n
+        Iron 883 has a 4 valve engine that generates 50 bhp of excellent power and 69NM of torque which enhances the ride experience of this Harley machine  </string>
+    <string name="forgot_password_desc">Enter the email address used for your\nwickedride ID and we will send you instructions</string>
+    <string name="email">Email ID</string>
+    <string name="return_to">RETURN TO</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="john_email">Eg:john@gmail.com</string>
+    <string name="john_name">Eg:John</string>
+    <string name="username">USERNAME</string>
+    <string name="username_email">USERNAME/EMAIL</string>
+    <string name="signin_email">EMAIL</string>
+    <string name="password">• • • • • •</string>
+    <string name="password_title">PASSWORD</string>
+    <string name="confirm_password_title">CONFIRM PASSWORD</string>
+    <string name="old_password_title">OLD PASSWORD</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="forgot_password_title">Forgot Password ?</string>
+    <string name="no_account">Dont have an account ?</string>
+    <string name="no_internet">Please check your connectivity and try later.</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="review_title">WRITE A REVIEW</string>
+    <string name="review_title_hint">Review Title</string>
+    <string name="accessories">Accessories</string>
+    <string name="price">PRICE</string>
+    <string name="date">Date</string>
+    <string name="description_title">DESCRIPTION</string>
+    <string name="joined">JOINED</string>
+    <string name="recommended">RECOMMENDED BIKES</string>
+    <string name="distance">DISTANCE</string>
+    <string name="meeting">MEETING AT</string>
+    <string name="includes">INCLUDES</string>
+    <string name="water_bottle">Water Bottle</string>
+    <string name="food">Food</string>
+    <string name="register_now">REGISTER NOW</string>
+
+    <string name="happy_riding_desc">You can\'t buy happiness, but you \n have successfully rented our bike, \n &#38; that is pretty close. </string>
+    <string name="happy_riding">HAPPY RIDING</string>
+    <string name="happy_riding_do"><![CDATA[Do not forget to bring along your \n DL & Passport]]></string>
+    <string name="coming_soon">Coming soon...</string>
+
+    <string name="tickets">Entry Tickets</string>
+    <string name="more">More: Site seeing entries, Club membership</string>
+    <string name="rule_1">* Helmet is must for every riders</string>
+    <string name="rule_2">* bike stunts strictly prohibited</string>
+    <string name="excludes">EXCLUDES</string>
+    <string name="medical">Medical</string>
+    <string name="accom">Accommodation</string>
+    <string name="personal">Personal Shopping</string>
+    <string name="rules">RIDE RULES</string>
+
+    <string name="general">GENERAL</string>
+    <string name="more_info">MORE INFO</string>
+    <string name="city_fragment">CITY FRAGMENT</string>
+    <string name="review">REVIEW</string>
+    <string name="rating">Rating : </string>
+    <string name="reserve_your">Reserve your</string>
+
+    <string name="summary">Summary</string>
+    <string name="from">FROM</string>
+    <string name="to">TO</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="pick_up_location">Pick Up Location</string>
+
+    <string name="select_city">SELECT YOUR CITY</string>
+    <string name="full_name">FULL NAME</string>
+    <string name="birthday">BIRTHDAY</string>
+    <string name="birthday_date">Eg:01-jul-1990</string>
+    <string name="create">CREATE</string>
+    <string name="send">SEND</string>
+    <string name="have_account">ALREADY HAVE AN ACCOUNT ?</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="profile">PROFILE</string>
+    <string name="title_activity_city">CityActivity</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="reserve">RESERVE FRAGMENT</string>
+    <string name="bikes">BIKES</string>
+    <string name="events">EVENTS</string>
+    <string name="confirmed">CONFIRMED</string>
+    <string name="amount_paid">Amount Paid</string>
+    <string name="meeting_at">Meeting At</string>
+    <string name="which_bike">Which bike are you riding currently ?</string>
+    <string name="google_plus">Google Plus</string>
+    <string name="facebook">Facebook</string>
+    <string name="play_services_error_fmt">Google Play Services Error: %i</string>
+    <string name="title_activity_reserve">ReserveActivity</string>
+    <string name="dots">• • •</string>
+    <string name="title_activity_edit_profile_activity">EditProfileActivity</string>
+    <string name="phone">Phone</string>
+    <string name="phone_hint">Eg:+91988XXXXXXX</string>
+    <string name="change_password">Change Password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="new_password_title">NEW PASSWORD</string>
+    <string name="search">SEARCH</string>
+    <string name="title_activity_pick_your_ride">PickYourRideActivity</string>
+
+    <string name="enter_proper_name">Please enter your name</string>
+    <string name="enter_proper_email">Please enter valid email id</string>
+    <string name="enter_proper_password">Please enter password</string>
+    <string name="password_too_small">Password is too small (Minimum 6 letters)</string>
+    <string name="password_doesnt_match">Sorry! Password mismatch</string>
+    <string name="invalid_phone_number">Please enter valid phone number</string>
+    <string name="select_pick_drop">Please select your pick up date and drop date</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="book_now">BOOK NOW</string>
+    <string name="done">Done</string>
+    <string name="contact_us">CONTACT US</string>
+    <string name="tariff">TARIFF</string>
+    <string name="next">Next</string>
+    <string name="john_last_name">Eg:Syndal</string>
+    <string name="tax_info">Inclusive of VAT 5.5%</string>
+
+
+</resources>

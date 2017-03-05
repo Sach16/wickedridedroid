@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/parentLyt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:background="#FFFFFF"
+        >
+
+        <RelativeLayout
+            android:id="@+id/edit_square_relative"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:paddingBottom="60dp"
+            android:paddingTop="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/ll_pinch"
+            android:layout_alignParentTop="true">
+
+
+            <com.wickedride.app.views.TouchImageView
+                android:id="@+id/editimage_image"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:scaleType="fitCenter"
+                android:layout_alignTop="@+id/editimage_mask"
+                android:layout_alignBottom="@+id/editimage_mask"
+                android:layout_centerInParent="true"
+                />
+
+            <ImageView
+                android:id="@+id/editimage_mask"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/grid" />
+
+
+            <ImageView
+                android:id="@+id/editimage_dummy"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:scaleType="fitCenter"
+                android:layout_alignTop="@+id/editimage_mask"
+                android:layout_alignBottom="@+id/editimage_mask" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_pinch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_alignParentBottom="true">
+            <Button
+                android:id="@+id/editimage_rotate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:drawableLeft="@drawable/rotate"
+                android:text="Rotate"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                android:textAllCaps="false"
+                android:layout_gravity="left"
+                android:layout_weight="0.4"
+                 />
+            <Button
+                android:id="@+id/editimage_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:text="Done"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                android:textAllCaps="false"
+                android:layout_gravity="right"
+                android:layout_weight="0.4"
+                />
+            <!--<TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pinch to zoom Image"
+                android:textStyle="italic"
+                android:textSize="14sp"
+                 />-->
+            <!--<TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:text="@string/pinch_to_zoom_img"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/dark_gray" />
+
+            <Button
+                android:id="@+id/editimage_rotate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawableLeft="@drawable/rotate"
+                android:paddingRight="10dp"
+                android:text="@string/rotate"
+                android:textColor="@color/dark_gray" />-->
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

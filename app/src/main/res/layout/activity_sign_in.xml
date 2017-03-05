@@ -1,0 +1,268 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="15dp"
+    android:scrollbars="none"
+    tools:context="com.wickedride.app.activities.SignInActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="80dp"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/logo_black_wickedride" />
+
+        <LinearLayout
+            android:id="@+id/signin_Lyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_name_title"
+                style="@style/Bikation_Title_details"
+                android:text="@string/signin_email" />
+
+            <EditText
+                android:id="@+id/user_name"
+                style="@style/EditTextTheme"
+                android:layout_below="@+id/user_name_title"
+                android:cursorVisible="true"
+                android:ems="10"
+                android:hint="@string/john_email"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/cursor_drawable" />
+
+            <TextView
+                android:id="@+id/password_title"
+                style="@style/Bikation_Title_details"
+                android:layout_below="@id/user_name"
+                android:layout_marginTop="15dp"
+                android:text="@string/password_title" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password_title"
+                android:layout_marginBottom="15dp">
+
+                <EditText
+                    android:id="@+id/password"
+                    style="@style/EditTextTheme"
+                    android:cursorVisible="true"
+                    android:ems="10"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:maxLength="30"
+                    android:textCursorDrawable="@drawable/cursor_drawable"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/forgot_pwd"
+                    fontPath="fonts/Avenir-Book.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/forgot_password"
+                    android:background="@android:color/white"
+                    android:textColor="@color/silver_grey"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/login"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:layout_below="@+id/password"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/black"
+                android:text="@string/sign_in"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/separator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signin_Lyt"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_weight="0.5"
+                android:background="@color/silver_grey" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.83"
+                android:paddingLeft="5dp"
+                android:text="OR"
+                android:textColor="@color/silver_grey" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_weight="0.5"
+                android:background="@color/silver_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/social_holder"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/separator"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/fb_login_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/fb_blue">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:src="@drawable/fb_logo" />
+
+                <TextView
+                    android:id="@+id/fb_login_text"
+                    fontPath="fonts/Montserrat-Bold.otf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/facebook"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/gp_login_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@color/gp_red">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:src="@drawable/google_logo" />
+
+                <TextView
+                    android:id="@+id/gp_login_text"
+                    fontPath="fonts/Montserrat-Bold.otf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:text="@string/google_plus"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+            <!--<com.google.android.gms.common.SignInButton-->
+            <!--android:id="@+id/sign_in_button"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="55dp"-->
+            <!--android:layout_marginBottom="30dp"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:layout_weight="1" />-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/register_holder"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signin_Lyt"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingLeft="5dp"
+                android:text="@string/no_account"
+                android:textAllCaps="true"
+                android:textColor="@color/silver_grey" />
+
+            <TextView
+                android:id="@+id/sign_up"
+                fontPath="fonts/Avenir-Roman.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingLeft="5dp"
+                android:text="@string/sign_up"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/close"
+            style="@style/layout_wrap"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="15dp"
+            android:src="@drawable/cross_black"
+            android:visibility="gone" />
+
+        <com.wickedride.app.views.WRProgressView
+            android:id="@+id/progress"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
